@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DRUM SET</title>
+</head>
+<style>
+    body{
+        background-color: rgb(0, 0, 0);
+    }
+    .drumsection{
+        height: 550px;
+        width: 550px;
+        border: 1px groove;
+        margin: auto;
+        margin-top: 50px;
+        background-color: deepskyblue;
+        box-shadow: 1px 2px 3px;
+    }
+    .div1{
+        display: flex;
+        justify-content: space-around;
+    }
+    #startDRUM{
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        box-shadow: 1px 2px 3px;
+        background-color:yellowgreen;
+        margin-top: 20px;
+    }
+    #endtDRUM{
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        box-shadow: 1px 2px 3px;
+        background-color:tan;
+        margin-top: 50px;
+    }
+    #mainDRUM{
+        height: 300px;
+        width: 300px;
+        border-radius: 50%;
+        box-shadow: 1px 2px 3px;
+        background-color:olivedrab;
+        margin:auto;
+    }
+    h1{
+        text-align: center;
+        position: relative;
+        top: 30%;
+    }
+</style>
+<body>
+    <section class="drumsection">
+<div class="div1">
+    <div id="startDRUM" onclick="START();" ondblclick="STpause();"><h1>START</h1></div>
+    <div id="endtDRUM" onclick="END();"  ondblclick="ENDpause();"><h1>END</h1></div>
+</div>
+<div id="mainDRUM" onclick="MAIN();"  ondblclick="MNpause();"><h1>MAIN</h1></div>
+    </section>
+    <script type="text/javascript">
+            let musicST = new Audio("START_BEAT.mp3");
+function START(){
+            musicST.play();
+        }
+ function STpause(){
+            musicST.pause();
+        }
+
+
+
+
+        let musicEND = new Audio("END_BEAT.mp3");
+        function END(){
+            musicEND.play();
+        }
+ function ENDpause(){
+    musicEND.pause();
+        }
+
+
+
+
+
+        let musicMAIN = new Audio("MAIN_BEAT.mp3");
+        function MAIN(){
+            musicMAIN.play();
+        }
+ function MNpause(){
+    musicMAIN.pause();
+        }
+
+    </script>
+</body>
+</html>
